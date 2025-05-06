@@ -13,7 +13,7 @@ read -p "choose one:" index
 if [ $index -ge 0 ] && [ "$index" -lt "${#files[@]}" ]
 then
 config=$(echo ${files[$index]})
-      echo "connectiong to ('$config')"
+      echo "connecting to ('$config')"
       sudo openvpn "$VPN_PATH/$config"
    else 
       echo "wrong index"
